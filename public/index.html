@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-time Speech-to-Text</title>
+    <title>Real-time Speech-to-Text Conference</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,17 +15,32 @@
             margin-top: 20px;
             color: #333;
         }
-        #start-btn {
+        #start-btn, #create-conference-btn, #join-conference-btn {
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
+            margin: 10px;
+        }
+        #join-form {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Real-time Speech-to-Text</h1>
+    <h1>Real-time Speech-to-Text Conference</h1>
+    
+    <!-- Button to start listening -->
     <button id="start-btn">Start Listening</button>
+
     <div id="subtitles">Your speech will appear here...</div>
+
+    <!-- Conference Creation -->
+    <button id="create-conference-btn">Create Conference</button>
+    
+    <div id="join-form" style="display:none;">
+        <input type="text" id="conference-code" placeholder="Enter Conference Code">
+        <button id="join-conference-btn">Join Conference</button>
+    </div>
 
     <script src="app.js"></script>
 </body>
